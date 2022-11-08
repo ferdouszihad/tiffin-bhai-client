@@ -36,3 +36,27 @@
     transform: rotate(360deg);
   }
 }
+.bg-ash{
+    background-color: #ddd;
+}
+#slider{
+    height: 90vh;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://cdn.dribbble.com/users/1197989/screenshots/5585685/delivery-boy.gif');
+    background-repeat: no-repeat;
+    background-size: cover ;
+    background-position: bottom center;
+} 
+.banner-main{
+    padding:30px;
+    background-color: rgba(221, 221, 221, 0.395);
+    border-radius: 15px;
+    transition: .6s all ;
+}
+.banner-main:hover{
+    color:#fff;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
