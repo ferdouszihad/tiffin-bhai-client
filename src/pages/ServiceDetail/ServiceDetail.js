@@ -7,7 +7,7 @@ const ServiceDetail = () => {
 
   return (
     <div className="mt-5">
-      <div className="container">
+      <div className="container service-section">
         <h4 className="display-4 border-5 ps-3 mb-5 border-start border-primary">
           {service.name}
         </h4>
@@ -27,6 +27,10 @@ const ServiceDetail = () => {
             </p>
           </div>
         </div>
+      </div>
+      <div className=" container review-section my-5">
+        <p className="text-danger">Review secttion Created</p>
+        <h1>Check All the Review About this Service</h1>
       </div>
     </div>
   );
