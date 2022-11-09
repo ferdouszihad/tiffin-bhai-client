@@ -3,6 +3,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 import Home from "./pages/Home/Home";
 import Services from "./pages/Services/Services";
+import Error404 from "./pages/Error404";
+import ServiceDetail from "./pages/ServiceDetail/ServiceDetail";
 
 function App() {
   const router = createBrowserRouter([
@@ -35,6 +37,24 @@ function App() {
             return services;
           },
           element: <Services></Services>,
+        },
+        {
+          path: "/services/:id",
+          loader: ({ params }) => {
+            const serviceDetail = fetch(
+              `http://localhost:5000/services/${params.id}`
+            );
+            return serviceDetail;
+          },
+          element: <ServiceDetail></ServiceDetail>,
+        },
+        {
+          path: "/*",
+          loader: () => {
+            const services = fetch("http://localhost:5000/services");
+            return services;
+          },
+          element: <Error404></Error404>,
         },
       ],
     },

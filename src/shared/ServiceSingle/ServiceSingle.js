@@ -4,7 +4,7 @@ import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
 
 const ServiceSingle = ({ service }) => {
-  const { name, img, description, pricing } = service;
+  const { _id, name, img, description, pricing } = service;
 
   return (
     <div className="service-single-box card ">
@@ -26,7 +26,10 @@ const ServiceSingle = ({ service }) => {
           Service-Charge: <span className="text-danger">{pricing} </span> Taka
         </p>
 
-        <Link to="#" className="btn btn-outline-warning text-dark fw-semibold">
+        <Link
+          to={`/services/${_id}`}
+          className="btn btn-outline-warning text-dark fw-semibold"
+        >
           See Details
         </Link>
       </div>
