@@ -3,6 +3,7 @@ import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import Services from "../Services/Services";
 import Slider from "../Slider/Slider";
+import Success from "../Success/Success";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -20,6 +21,7 @@ const Home = () => {
           see all services
         </Button>
       </div>
+      <Success></Success>
     </div>
   );
 };
