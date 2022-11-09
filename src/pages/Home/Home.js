@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import Contact from "../Contact/Contact";
 import Services from "../Services/Services";
 import Slider from "../Slider/Slider";
 import Success from "../Success/Success";
@@ -11,6 +12,7 @@ const Home = () => {
   return (
     <div>
       <Slider></Slider>
+      <Contact></Contact>
       <div className="services">
         <Services></Services>
 

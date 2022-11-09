@@ -23,20 +23,35 @@ const Success = () => {
           </div>
           <div className="success">
             <h1>
-              <CountUp end={613} duration={4} enableScrollSpy={true}></CountUp>
+              <CountUp
+                end={613}
+                duration={4}
+                delay={1}
+                enableScrollSpy={true}
+              ></CountUp>
             </h1>
             <h4>Delivery</h4>
           </div>
 
           <div className="success">
             <h1>
-              <CountUp end={190} duration={3} enableScrollSpy={true}></CountUp>
+              <CountUp
+                end={190}
+                duration={3}
+                delay={1}
+                enableScrollSpy={true}
+              ></CountUp>
             </h1>
             <h4>Clients</h4>
           </div>
           <div className="success">
             <h1>
-              <CountUp end={967} duration={4} enableScrollSpy={true}></CountUp>
+              <CountUp
+                end={967}
+                duration={4}
+                delay={1}
+                enableScrollSpy={true}
+              ></CountUp>
             </h1>
             <h4>Reveiws</h4>
           </div>
