@@ -6,7 +6,7 @@ import Header from "../shared/Header/Header";
 const MainLayout = () => {
   return (
     <div>
-      <header>
+      <header className="pb-5">
         <Header></Header>
       </header>
       <main>

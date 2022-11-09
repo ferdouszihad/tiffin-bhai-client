@@ -7,7 +7,7 @@ import "./Header.css";
 
 const Header = () => {
   return (
-    <div id="header">
+    <div id="header" className="fixed-top ">
       <Navbar collapseOnSelect expand="lg" bg="warning" variant="light">
         <Container>
           <Navbar.Brand href="#home">Tiffin Bhai</Navbar.Brand>

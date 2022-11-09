@@ -10,8 +10,8 @@ const ServiceSingle = ({ service }) => {
       <div className="card-body d-flex flex-column justify-content-between">
         <h5 className="card-title">{name}</h5>
         <p className="card-text">{description.slice(0, 100)} ...</p>
-        <Link to="#" className="btn btn-warning">
-          see Details
+        <Link to="#" className="btn btn-outline-warning text-dark fw-semibold">
+          See Details
         </Link>
       </div>
     </div>
