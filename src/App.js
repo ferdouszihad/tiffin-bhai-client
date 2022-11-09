@@ -15,6 +15,12 @@ function App() {
         },
         {
           path: "",
+          loader: () => {
+            const services = fetch(
+              "https://tiffinbhai-server.vercel.app/services"
+            );
+            return services;
+          },
           element: <Home></Home>,
         },
       ],

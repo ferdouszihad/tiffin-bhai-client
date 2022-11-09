@@ -60,3 +60,30 @@
     color:#fff;
     background-color: rgba(0, 0, 0, 0.5); 
 }
+
+
+.services-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+.service-single-box img{
+    max-height: 200px;
+
+} 
+
+@media screen and (max-width:992px) {
+
+    .services-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+}
+@media screen and (max-width:768px) {
+
+    .services-container{
+        grid-template-columns: 1fr;
+    }
+    
+}

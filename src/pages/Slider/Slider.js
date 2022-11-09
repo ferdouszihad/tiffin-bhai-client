@@ -1,7 +1,5 @@
 import React from "react";
 import { Button } from "react-bootstrap";
-import Carousel from "react-bootstrap/Carousel";
-import sliderImg from "../../img/sliderbg.jpg";
 
 const Slider = () => {
   return (
