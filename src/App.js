@@ -5,6 +5,7 @@ import Home from "./pages/Home/Home";
 import Services from "./pages/Services/Services";
 import Error404 from "./pages/Error404";
 import ServiceDetail from "./pages/ServiceDetail/ServiceDetail";
+import Blog from "./pages/Blog/Blog";
 
 function App() {
   const router = createBrowserRouter([
@@ -47,6 +48,11 @@ function App() {
             return serviceDetail;
           },
           element: <ServiceDetail></ServiceDetail>,
+        },
+        {
+          path: "/blog",
+
+          element: <Blog></Blog>,
         },
         {
           path: "/*",
