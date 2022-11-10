@@ -84,7 +84,13 @@ function App() {
           ),
         },
         {
-          path: "/user-review",
+          path: "/user-review/:uid",
+          loader: ({ params }) => {
+            const userReviews = fetch(
+              `http://localhost:5000/user-review/${params.uid}`
+            );
+            return userReviews;
+          },
           element: (
             <PrivateRoute>
               <UserReview></UserReview>

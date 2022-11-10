@@ -16,6 +16,7 @@ const ServiceDetail = () => {
     const reviewMsg = form.review.value;
     const review = {
       serviceId: service._id,
+      serviceName: service.name,
       userId: user.uid,
       userName: user.displayName ? user.displayName : user.email,
       userImg: user.photoURL

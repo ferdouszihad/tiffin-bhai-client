@@ -41,7 +41,7 @@ const Header = () => {
               {user && user.uid ? (
                 <>
                   <Link to="addService">Add services</Link>
-                  <Link to="user-review">My Reviews</Link>
+                  <Link to={`user-review/${user.uid}`}>My Reviews</Link>
                   <Link onClick={handleLogOut}>signOut</Link>
                   <div className="user-info d-flex  justify-content-center align-items-end">
                     <div className="user-img">
