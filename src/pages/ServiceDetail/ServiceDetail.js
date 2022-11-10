@@ -4,8 +4,10 @@ import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../context/UserContext";
 import ReviewSingle from "../ReviewSingle/ReviewSingle";
 import { ToastContainer, toast } from "react-toastify";
+import useTitle from "../../shared/UseTitle";
 
 const ServiceDetail = () => {
+  useTitle();
   const { user } = useContext(AuthContext);
   const { service, reviews } = useLoaderData();
   const [serviceReviews, setServiceReviews] = useState(reviews);

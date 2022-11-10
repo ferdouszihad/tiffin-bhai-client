@@ -1,8 +1,10 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
 import ServiceSingle from "../../shared/ServiceSingle/ServiceSingle";
+import useTitle from "../../shared/UseTitle";
 
 const Services = () => {
+  useTitle();
   const services = useLoaderData();
   //   console.log(services);
   return (

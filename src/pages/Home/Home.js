@@ -1,12 +1,14 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import useTitle from "../../shared/UseTitle";
 import Contact from "../Contact/Contact";
 import Services from "../Services/Services";
 import Slider from "../Slider/Slider";
 import Success from "../Success/Success";
 
 const Home = () => {
+  useTitle();
   const navigate = useNavigate();
 
   return (

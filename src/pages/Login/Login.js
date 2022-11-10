@@ -4,8 +4,10 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/UserContext";
+import useTitle from "../../shared/UseTitle";
 
 const Login = () => {
+  useTitle();
   const [error, setError] = useState("");
   const { signIn, setUser, googleSignIn } = useContext(AuthContext);
 

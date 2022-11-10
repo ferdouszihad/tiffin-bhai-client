@@ -1,6 +1,8 @@
 import React from "react";
+import useTitle from "../../shared/UseTitle";
 
 const Blog = () => {
+  useTitle();
   return (
     <div className="container mt-5 mb-3">
       <h2 class="py-3 m-2 rounded-2 bg-warning text-center">Our Blogs</h2>

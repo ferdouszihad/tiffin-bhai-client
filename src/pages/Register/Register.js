@@ -5,8 +5,10 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/UserContext";
+import useTitle from "../../shared/UseTitle";
 
 const Register = () => {
+  useTitle();
   const [error, setError] = useState("");
   const { createUser, setUser, googleSignIn } = useContext(AuthContext);
   const navigate = useNavigate();

@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import UserReviewSingle from "../UserReviewSingle/UserReviewSingle";
 import { ToastContainer, toast } from "react-toastify";
+import useTitle from "../../shared/UseTitle";
 
 const UserReview = () => {
+  useTitle();
   const UserReviews = useLoaderData();
   const [reviews, setReviews] = useState(UserReviews);
 
