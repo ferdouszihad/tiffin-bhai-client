@@ -93,15 +93,6 @@ const Register = () => {
               <small className="text-danger">{error}</small>
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label>Your Photo URL</Form.Label>
-              <Form.Control
-                type="text"
-                name="name"
-                placeholder="any photo url"
-              />
-            </Form.Group>
-
             <Button variant="warning" type="submit" className="d-block w-100">
               Get me in
             </Button>
