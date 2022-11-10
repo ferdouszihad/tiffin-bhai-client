@@ -9,7 +9,7 @@ const MainLayout = () => {
       <header className="pb-5">
         <Header></Header>
       </header>
-      <main>
+      <main className="mt-3">
         <Outlet></Outlet>
       </main>
 

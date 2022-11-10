@@ -8,6 +8,8 @@ import ServiceDetail from "./pages/ServiceDetail/ServiceDetail";
 import Blog from "./pages/Blog/Blog";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
+import AddService from "./pages/AddService/AddService";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 function App() {
   const router = createBrowserRouter([
@@ -71,6 +73,14 @@ function App() {
         {
           path: "/register",
           element: <Register></Register>,
+        },
+        {
+          path: "/addService",
+          element: (
+            <PrivateRoute>
+              <AddService></AddService>
+            </PrivateRoute>
+          ),
         },
       ],
     },

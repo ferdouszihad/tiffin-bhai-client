@@ -5,7 +5,7 @@ const Blog = () => {
     <div className="container mt-5 mb-3">
       <h2 class="py-3 m-2 rounded-2 bg-warning text-center">Our Blogs</h2>
       <div className="blogs-container">
-        <article class="my-4 mb-5 border border-warning p-3 rounded-2">
+        <article class="my-4 mb-5 border border-warning p-3 rounded-bottom">
           <h2>Difference between SQL and NoSQL</h2>
           <hr />
           <p>

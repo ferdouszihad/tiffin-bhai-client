@@ -47,7 +47,7 @@ const Login = () => {
   return (
     <div>
       <div className="container my-3">
-        <h1 className="bg-warning py-4 my-5  text-center rounded-5">
+        <h1 className="bg-warning py-4 my-5  text-center rounded-2">
           Login Now
         </h1>
         <div

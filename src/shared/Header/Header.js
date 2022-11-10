@@ -21,7 +21,7 @@ const Header = () => {
   return (
     <div id="header" className="fixed-top ">
       {user && user.uid ? (
-        <p className="bg-secondary text-light m-0 text-center">
+        <p className="bg-dark py-1 text-light m-0 text-center">
           🎉 Welcome,
           {user.displayName ? user.displayName : user.email}
         </p>
@@ -37,10 +37,11 @@ const Header = () => {
               <Link to="home">home</Link>
               <Link to="services">services</Link>
               <Link to="blog">blogs</Link>
-              <Link to="Reviews">Reviews</Link>
 
               {user && user.uid ? (
                 <>
+                  <Link to="addService">Add services</Link>
+                  <Link to="myReview">My Reviews</Link>
                   <Link onClick={handleLogOut}>signOut</Link>
                   <div className="user-info d-flex  justify-content-center align-items-end">
                     <div className="user-img">
