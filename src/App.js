@@ -10,6 +10,7 @@ import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import AddService from "./pages/AddService/AddService";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
+import UserReview from "./pages/UserReview/UserReview";
 
 function App() {
   const router = createBrowserRouter([
@@ -79,6 +80,14 @@ function App() {
           element: (
             <PrivateRoute>
               <AddService></AddService>
+            </PrivateRoute>
+          ),
+        },
+        {
+          path: "/user-review",
+          element: (
+            <PrivateRoute>
+              <UserReview></UserReview>
             </PrivateRoute>
           ),
         },
