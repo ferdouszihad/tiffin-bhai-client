@@ -44,7 +44,9 @@ const UserReview = () => {
           User All Review
         </h2>
         {reviews.length === 0 ? (
-          <p className="display-4 text-danger">No Review Added Yet</p>
+          <p className="display-4 text-danger no-review-alert">
+            No Review Added Yet
+          </p>
         ) : (
           <div className="user-review-container my-5">
             {reviews.map((rs) => (

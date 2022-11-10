@@ -88,6 +88,13 @@
     background-color: rgba(221, 221, 221, 0.208);
 }
 
+.no-review-alert{
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 
 
