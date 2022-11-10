@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
 
 const AddService = () => {
   const navigate = useNavigate();
@@ -31,13 +32,23 @@ const AddService = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        alert(`${service.name} service is added Successfully`);
-        navigate("../services");
+        toast.success("New Service Added", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        form.reset();
       })
       .catch((err) => console.log(err));
   };
   return (
     <div className="mt-5">
+      <ToastContainer />
       <div className="container mt-4">
         <h2 className="bg-warning py-4 my-5  text-center  rounded-bottom">
           Add a Service
