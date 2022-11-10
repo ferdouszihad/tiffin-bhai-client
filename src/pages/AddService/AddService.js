@@ -1,9 +1,40 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const AddService = () => {
+  const navigate = useNavigate();
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("form submitted");
+    const form = event.target;
+    const name = form.ServiceName.value;
+    const image = form.image.value;
+    const desc = form.desc.value;
+    const pricing = form.pricing.value;
+
+    const service = {
+      id: parseInt(Math.random() * 100),
+      name: name,
+      img: image,
+      description: desc,
+      pricing: pricing,
+      review: 0,
+      sell: 0,
+    };
+    //console.log(service);
+
+    fetch("http://localhost:5000/addService", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(service),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        alert(`${service.name} service is added Successfully`);
+        navigate("../services");
+      })
+      .catch((err) => console.log(err));
   };
   return (
     <div className="mt-5">
@@ -18,51 +49,58 @@ const AddService = () => {
             </h2>{" "}
             <hr />
             <form onSubmit={handleSubmit} className="w-75">
-              <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">
+              <div className="mb-3">
+                <label htmlFor="exampleInputEmail1" className="form-label">
                   Name
                 </label>
                 <input
                   type="text"
-                  class="form-control"
+                  name="ServiceName"
+                  className="form-control"
                   placeholder="Give your Service a name"
                 />
               </div>
 
-              <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">
+              <div className="mb-3">
+                <label
+                  htmlFor="exampleFormControlTextarea1"
+                  className="form-label"
+                >
                   Description
                 </label>
                 <textarea
-                  class="form-control"
+                  name="desc"
+                  className="form-control"
                   id="exampleFormControlTextarea1"
                   rows="3"
                   placeholder="Add a Perfect description for your Service"
                 ></textarea>
               </div>
 
-              <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">
+              <div className="mb-3">
+                <label htmlFor="exampleInputEmail1" className="form-label">
                   Image url
                 </label>
                 <input
                   type="text"
-                  class="form-control"
+                  name="image"
+                  className="form-control"
                   placeholder="Insert any Image URl of your Service"
                 />
               </div>
-              <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">
+              <div className="mb-3">
+                <label htmlFor="exampleInputEmail1" className="form-label">
                   Price
                 </label>
                 <input
+                  name="pricing"
                   type="number"
-                  class="form-control"
+                  className="form-control"
                   placeholder="enter your Service fee"
                 />
               </div>
 
-              <button type="submit" class="btn btn-primary">
+              <button type="submit" className="btn btn-primary">
                 Submit
               </button>
             </form>
