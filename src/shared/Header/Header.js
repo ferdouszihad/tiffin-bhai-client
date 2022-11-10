@@ -5,6 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/UserContext";
 import "./Header.css";
+import logo from "../../img/logo.png";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -30,7 +31,12 @@ const Header = () => {
       )}
       <Navbar collapseOnSelect expand="lg" bg="warning" variant="light">
         <Container>
-          <Navbar.Brand href="#home">Tiffin Bhai</Navbar.Brand>
+          <Navbar.Brand>
+            <Link to="">
+              <img src={logo} alt="" style={{ maxWidth: "40px" }} />
+              <span className="fw-bold text-shadow">Tiffin-Bhai</span>
+            </Link>
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto">
