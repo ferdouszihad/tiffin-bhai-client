@@ -1,5 +1,4 @@
 import React from "react";
-import Toast from "../../shared/Toast/Toast";
 
 const Contact = () => {
   return (
