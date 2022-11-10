@@ -29,7 +29,7 @@ const ServiceDetail = () => {
 
     console.log(review);
 
-    fetch("http://localhost:5000/addReview", {
+    fetch("https://tiffinbhai-server.vercel.app/addReview", {
       method: "POST",
       headers: {
         "content-type": "application/json",

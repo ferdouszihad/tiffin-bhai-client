@@ -17,7 +17,7 @@ const UserReview = () => {
     );
     setReviews(reviewRemaining);
 
-    fetch(`http://localhost:5000/review/${review_id}`, {
+    fetch(`https://tiffinbhai-server.vercel.app/review/${review_id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

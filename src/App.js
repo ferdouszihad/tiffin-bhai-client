@@ -21,7 +21,9 @@ function App() {
         {
           path: "home",
           loader: () => {
-            const services = fetch("http://localhost:5000/3services");
+            const services = fetch(
+              "https://tiffinbhai-server.vercel.app/3services"
+            );
             return services;
           },
 
@@ -30,7 +32,9 @@ function App() {
         {
           path: "",
           loader: () => {
-            const services = fetch("http://localhost:5000/3services");
+            const services = fetch(
+              "https://tiffinbhai-server.vercel.app/3services"
+            );
             return services;
           },
           element: <Home></Home>,
@@ -39,7 +43,9 @@ function App() {
         {
           path: "/services",
           loader: () => {
-            const services = fetch("http://localhost:5000/services");
+            const services = fetch(
+              "https://tiffinbhai-server.vercel.app/services"
+            );
             return services;
           },
           element: <Services></Services>,
@@ -48,7 +54,7 @@ function App() {
           path: "/services/:id",
           loader: ({ params }) => {
             const serviceDetail = fetch(
-              `http://localhost:5000/services/${params.id}`
+              `https://tiffinbhai-server.vercel.app/services/${params.id}`
             );
             return serviceDetail;
           },
@@ -62,7 +68,9 @@ function App() {
         {
           path: "/*",
           loader: () => {
-            const services = fetch("http://localhost:5000/services");
+            const services = fetch(
+              "https://tiffinbhai-server.vercel.app/services"
+            );
             return services;
           },
           element: <Error404></Error404>,
@@ -87,7 +95,7 @@ function App() {
           path: "/user-review/:uid",
           loader: ({ params }) => {
             const userReviews = fetch(
-              `http://localhost:5000/user-review/${params.uid}`
+              `https://tiffinbhai-server.vercel.app/user-review/${params.uid}`
             );
             return userReviews;
           },
