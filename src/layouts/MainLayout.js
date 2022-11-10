@@ -13,7 +13,7 @@ const MainLayout = () => {
         <Outlet></Outlet>
       </main>
 
-      <footer>
+      <footer className="pt-5">
         <Footer></Footer>
       </footer>
     </div>

@@ -21,7 +21,6 @@ const ServiceDetail = () => {
             <hr className="my-3" />
             <h4>Pricing</h4>
             <p>
-              Service-Charge:{" "}
               <span className="text-danger">{service.pricing} </span>
               Taka
             </p>
@@ -31,6 +30,7 @@ const ServiceDetail = () => {
       <div className=" container review-section my-5">
         <p className="text-danger">Review secttion Created</p>
         <h1>Check All the Review About this Service</h1>
+        <hr />
       </div>
     </div>
   );
