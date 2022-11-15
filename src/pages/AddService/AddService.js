@@ -69,6 +69,7 @@ const AddService = () => {
                   name="ServiceName"
                   className="form-control"
                   placeholder="Give your Service a name"
+                  required
                 />
               </div>
 
@@ -85,6 +86,7 @@ const AddService = () => {
                   id="exampleFormControlTextarea1"
                   rows="3"
                   placeholder="Add a Perfect description for your Service"
+                  required
                 ></textarea>
               </div>
 
@@ -97,6 +99,7 @@ const AddService = () => {
                   name="image"
                   className="form-control"
                   placeholder="Insert any Image URl of your Service"
+                  required
                 />
               </div>
               <div className="mb-3">
@@ -108,6 +111,7 @@ const AddService = () => {
                   type="number"
                   className="form-control"
                   placeholder="enter your Service fee"
+                  required
                 />
               </div>
 

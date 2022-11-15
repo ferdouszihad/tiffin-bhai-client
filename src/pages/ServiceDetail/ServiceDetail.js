@@ -16,6 +16,7 @@ const ServiceDetail = () => {
     event.preventDefault();
     const form = event.target;
     const reviewMsg = form.review.value;
+
     const review = {
       serviceId: service._id,
       serviceName: service.name,
@@ -100,7 +101,8 @@ const ServiceDetail = () => {
                         className="form-control"
                         id="exampleFormControlTextarea1"
                         rows="3"
-                        placeholder="Add a Perfect description for your Service"
+                        placeholder="Add a Perfect Review for the Service"
+                        required
                       ></textarea>
                     </div>
 
