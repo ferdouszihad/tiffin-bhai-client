@@ -1,6 +1,6 @@
 Website Name: Tiffin Bhai . This is a Home Delivery Service website and It Provides Service about delivery , assistancy Services.
 
-The Project has been devolpoed by Ferdous Zihad . CEO of Techsoros
+The Project has been devolpoed by Ferdous Zihad
 
 # Website Link Given below
 
