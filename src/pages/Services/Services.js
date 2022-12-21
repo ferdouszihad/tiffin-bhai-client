@@ -1,5 +1,6 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
+import Loading from "../../shared/Loading";
 import ServiceSingle from "../../shared/ServiceSingle/ServiceSingle";
 import useTitle from "../../shared/UseTitle";
 
@@ -7,6 +8,10 @@ const Services = () => {
   useTitle();
   const services = useLoaderData();
   //   console.log(services);
+
+  if (!services) {
+    return <Loading></Loading>;
+  }
   return (
     <div className="my-5">
       <div className="container">

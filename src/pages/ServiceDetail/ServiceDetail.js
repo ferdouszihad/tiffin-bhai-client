@@ -5,11 +5,13 @@ import { AuthContext } from "../../context/UserContext";
 import ReviewSingle from "../ReviewSingle/ReviewSingle";
 import { ToastContainer, toast } from "react-toastify";
 import useTitle from "../../shared/UseTitle";
+import Loading from "../../shared/Loading";
 
 const ServiceDetail = () => {
   useTitle();
   const { user } = useContext(AuthContext);
-  const { service, reviews } = useLoaderData();
+  const data = useLoaderData();
+  const { service, reviews } = data;
   const [serviceReviews, setServiceReviews] = useState(reviews);
 
   const handleSubmit = (event) => {
@@ -57,6 +59,10 @@ const ServiceDetail = () => {
       })
       .catch((err) => console.log(err));
   };
+
+  if (!data) {
+    return <Loading></Loading>;
+  }
 
   return (
     <div className="mt-5">
