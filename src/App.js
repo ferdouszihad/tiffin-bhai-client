@@ -11,6 +11,7 @@ import Register from "./pages/Register/Register";
 import AddService from "./pages/AddService/AddService";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import UserReview from "./pages/UserReview/UserReview";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   const router = createBrowserRouter([
@@ -110,6 +111,7 @@ function App() {
   ]);
   return (
     <div>
+      <ToastContainer></ToastContainer>
       <RouterProvider router={router}></RouterProvider>
     </div>
   );

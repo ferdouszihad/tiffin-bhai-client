@@ -4,18 +4,21 @@ import { useContext } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import { AuthContext } from "../../context/UserContext";
 import useTitle from "../../shared/UseTitle";
 
 const Register = () => {
   useTitle();
   const [error, setError] = useState("");
-  const { createUser, setUser, googleSignIn } = useContext(AuthContext);
+  const { createUser, setUser, googleSignIn, updateUser } =
+    useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleGoogleSignIn = () => {
     googleSignIn()
       .then((res) => {
+        toast.success("User Successfully Signed-in");
         const user = res.user;
         setUser(user);
         navigate("/home");
@@ -39,10 +42,15 @@ const Register = () => {
 
     createUser(email, password)
       .then((res) => {
-        alert("Sign-up Successful");
+        toast.success("User Successfully Signed-in");
         const user = res.user;
-
-        setUser(user);
+        user.displayName = name;
+        updateUser({ displayName: name })
+          .then(() => {
+            setUser(user);
+            console.log(user);
+          })
+          .catch((err) => console.log(err));
         form.reset();
         navigate("/home");
       })

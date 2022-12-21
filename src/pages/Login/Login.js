@@ -3,6 +3,7 @@ import { useContext } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import { AuthContext } from "../../context/UserContext";
 import useTitle from "../../shared/UseTitle";
 
@@ -17,6 +18,7 @@ const Login = () => {
     googleSignIn()
       .then((res) => {
         const user = res.user;
+        toast.success("User Successfully Signed-in");
         setUser(user);
         navigate("/home");
       })
@@ -35,7 +37,7 @@ const Login = () => {
       .then((res) => {
         const user = res.user;
         setUser(user);
-        alert("Successfull");
+        toast.success("User Successfully Loggedd-in");
         console.log(user);
         form.reset();
         navigate("/home");
